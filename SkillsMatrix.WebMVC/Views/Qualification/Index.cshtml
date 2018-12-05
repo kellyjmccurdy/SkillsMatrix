@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<SkillsMatrix.Models.QualificationListItem>
 
 @{
-    ViewBag.Title = "QualificationIndex";
+    ViewBag.Title = "Index";
 }
 
-<h2>QualificationIndex</h2>
+<h2>Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -15,7 +15,16 @@
             @Html.DisplayNameFor(model => model.QualificationId)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Title)
+            @Html.DisplayNameFor(model => model.SkillsId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YearsOfExperience)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SkillLevel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Certification)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.CreatedUtc)
@@ -29,7 +38,16 @@
             @Html.DisplayFor(modelItem => item.QualificationId)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Title)
+            @Html.DisplayFor(modelItem => item.SkillsId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YearsOfExperience)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SkillLevel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Certification)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.CreatedUtc)

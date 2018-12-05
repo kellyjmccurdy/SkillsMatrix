@@ -10,7 +10,11 @@ namespace SkillsMatrix.Models
     public class ProfileListItem
     {
         public int ProfileId { get; set; }
-        public string Title { get; set; }
+        public int OwnerId { get; set; }
+        public int EmployeeId { get; set; }
+        public string SkillId { get; set; }
+        public string SkillLevel { get; set; }
+        public string CertificationName { get; set; }
 
         [Display(Name="Created")]
         public DateTimeOffset CreatedUtc { get; set; }

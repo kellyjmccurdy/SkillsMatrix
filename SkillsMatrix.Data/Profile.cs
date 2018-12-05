@@ -20,6 +20,8 @@ namespace SkillsMatrix.Data
 
         public int SkillId { get; set; }
 
+        public string SkillLevel { get; set; }
+
         public int CertificationId { get; set; }
 
 

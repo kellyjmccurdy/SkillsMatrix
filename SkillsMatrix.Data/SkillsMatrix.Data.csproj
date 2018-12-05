@@ -56,6 +56,15 @@
   <ItemGroup>
     <Compile Include="Employee.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\201812051417466_InitialCreate.cs" />
+    <Compile Include="Migrations\201812051417466_InitialCreate.Designer.cs">
+      <DependentUpon>201812051417466_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812051421188_FixingDatabaseErrors.cs" />
+    <Compile Include="Migrations\201812051421188_FixingDatabaseErrors.Designer.cs">
+      <DependentUpon>201812051421188_FixingDatabaseErrors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Profile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Qualification.cs" />
@@ -63,6 +72,14 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201812051417466_InitialCreate.resx">
+      <DependentUpon>201812051417466_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812051421188_FixingDatabaseErrors.resx">
+      <DependentUpon>201812051421188_FixingDatabaseErrors.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

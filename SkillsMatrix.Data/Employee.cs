@@ -7,6 +7,17 @@ using System.Threading.Tasks;
 
 namespace SkillsMatrix.Data
 {
+
+    public enum EducationLevel
+    {
+    Doctorate = 1,
+    Master,
+    Bachelor,
+    Associate,
+    SomeCollege,
+    HighSchool
+    }
+
     public class Employee
     {
         [Key]
@@ -16,14 +27,14 @@ namespace SkillsMatrix.Data
         public Guid OwnerId { get; set; }
 
         [Required]
-        public string LastName { get; set; }
+        public string FirstName { get; set; }
 
         [Required]
-        public string FirstName { get; set; }
+        public string LastName { get; set; }
 
         [Required]
         public string JobTitle { get; set; }
 
-        public string EducationLevel { get; set; }
+        public EducationLevel LevelOfEducation { get; set; }
     }
 }

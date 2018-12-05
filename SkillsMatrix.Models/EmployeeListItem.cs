@@ -10,7 +10,11 @@ namespace SkillsMatrix.Models
     public class EmployeeListItem
     {
         public int EmployeeId { get; set; }
-        public string Title { get; set; }
+        public int OwnerId { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string JobTitle { get; set; }
+        public string EducationLevel { get; set; }
 
         [Display(Name="Created")]
         public DateTimeOffset CreatedUtc { get; set; }

@@ -32,17 +32,34 @@ namespace SkillsMatrix.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(EmployeeCreate model)
         {
-            if (!ModelState.IsValid)
-            {
-                return View(model);
-            }
+            if (!ModelState.IsValid) return View(model);
 
+            var service = CreateEmployeeService();
+
+            if (service.CreateEmployee(model))
+            {
+                TempData["SaveResult"] = "Your employee was created.";
+                return RedirectToAction("Index");
+            };
+
+            ModelState.AddModelError("", "Employee could not be created.");
+
+            return View(model);
+        }
+
+        public ActionResult Details(int id)
+        {
+            var svc = CreateEmployeeService();
+            var model = svc.GetEmployeeById(id);
+
+            return View(model);
+        }
+
+        private EmployeeService CreateEmployeeService()
+        {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new EmployeeService(userId);
-
-            service.CreateEmployee(model);
-
-            return RedirectToAction("Index");
+            return service;
         }
     }
 }

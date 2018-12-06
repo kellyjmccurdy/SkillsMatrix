@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EmployeeCreate.cs" />
+    <Compile Include="EmployeeDetail.cs" />
     <Compile Include="EmployeeListItem.cs" />
     <Compile Include="ProfileCreate.cs" />
     <Compile Include="ProfileListItem.cs" />

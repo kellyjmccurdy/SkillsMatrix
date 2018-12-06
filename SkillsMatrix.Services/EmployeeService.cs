@@ -62,5 +62,27 @@ namespace SkillsMatrix.Services
                 return query.ToArray();
             }
         }
+
+        public EmployeeDetail GetEmployeeById(int employeeId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Employees
+                        .Single(e => e.EmployeeId == employeeId && e.OwnerId == _userId);
+                return
+                    new EmployeeDetail
+                    {
+                        EmployeeId = entity.EmployeeId,
+                        FirstName = entity.FirstName,
+                        LastName = entity.LastName,
+                        JobTitle = entity.JobTitle,
+                        LevelOfEducation = entity.LevelOfEducation,
+                        CreatedUtc = entity.CreatedUtc,
+                        ModifiedUtc = entity.ModifiedUtc
+                    };
+            }
+        }
     }
 }

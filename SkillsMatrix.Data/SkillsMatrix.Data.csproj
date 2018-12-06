@@ -64,6 +64,10 @@
     <Compile Include="Migrations\201812051421188_FixingDatabaseErrors.Designer.cs">
       <DependentUpon>201812051421188_FixingDatabaseErrors.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812061715528_Added Stuff.cs" />
+    <Compile Include="Migrations\201812061715528_Added Stuff.Designer.cs">
+      <DependentUpon>201812061715528_Added Stuff.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Profile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812051421188_FixingDatabaseErrors.resx">
       <DependentUpon>201812051421188_FixingDatabaseErrors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812061715528_Added Stuff.resx">
+      <DependentUpon>201812061715528_Added Stuff.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

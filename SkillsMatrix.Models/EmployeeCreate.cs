@@ -1,29 +1,18 @@
-﻿using System;
+﻿using SkillsMatrix.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SkillsMatrix.Data
+namespace SkillsMatrix.Models
 {
-    public enum EducationLevel
-    {
-    Doctorate = 1,
-    Master,
-    Bachelor,
-    Associate,
-    SomeCollege,
-    HighSchool
-    }
 
-    public class Employee
+    public class EmployeeCreate
     {
         [Key]
         public int EmployeeId { get; set; }
-
-        [Required]
-        public Guid OwnerId { get; set; }
 
         [Required]
         public string FirstName { get; set; }
@@ -34,11 +23,11 @@ namespace SkillsMatrix.Data
         [Required]
         public string JobTitle { get; set; }
 
-        [Required]
         public EducationLevel LevelOfEducation { get; set; }
 
-        [Required]
-        public DateTimeOffset CreatedUtc { get; set; }
-        public DateTimeOffset? ModifiedUtc { get; set; }
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }

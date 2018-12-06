@@ -15,5 +15,22 @@ namespace SkillsMatrix.WebMVC.Controllers
             var model = new SkillsMatrix.Models.QualificationListItem[0];
             return View(model);
         }
+
+        //GET
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(SkillsMatrix.Models.QualificationCreate model)
+        {
+            if (ModelState.IsValid)
+            {
+
+            }
+            return View(model);
+        }
     }
 }

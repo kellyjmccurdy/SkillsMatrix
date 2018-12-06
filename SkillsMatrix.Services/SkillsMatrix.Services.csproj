@@ -54,11 +54,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmployeeService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SkillsMatrix.Data\SkillsMatrix.Data.csproj">
+      <Project>{e6496647-b526-42b8-b93e-6f063b051149}</Project>
+      <Name>SkillsMatrix.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SkillsMatrix.Models\SkillsMatrix.Models.csproj">
+      <Project>{c86cb65d-7441-417c-aef3-9718ca4cf90a}</Project>
+      <Name>SkillsMatrix.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

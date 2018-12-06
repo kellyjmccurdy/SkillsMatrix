@@ -20,6 +20,29 @@ namespace SkillsMatrix.Data
     }
 
     public enum SkillLevel { Beginner = 1, Intermediate, Expert, Master }
+
+    public enum SkillId
+    {
+        MicrosoftOffice = 1,
+        css,
+        html,
+        HRIS,
+        ProjectManagement,
+        SoftwareDevelopment,
+        OrganizationalDevelopment,
+        TeamBuilding,
+        Training,
+        Communication,
+        Python,
+        AngularJS,
+        NETCore,
+        Testing,
+        ProblemSolving,
+        Debugging,
+        AttentionToDetail,
+        UXUI
+    }
+
     public class Qualification
     {
         public int QualificationId { get; set; }

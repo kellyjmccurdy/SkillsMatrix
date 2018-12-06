@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SkillsMatrix.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -14,14 +15,9 @@ namespace SkillsMatrix.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string JobTitle { get; set; }
-        public string EducationLevel { get; set; }
+        public EducationLevel LevelOfEducation { get; set; }
 
-        [Display(Name="Created")]
+        [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }
-
-        public override string ToString()
-        {
-            return base.ToString();
-        }
     }
 }

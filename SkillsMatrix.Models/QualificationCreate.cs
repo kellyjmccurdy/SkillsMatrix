@@ -9,12 +9,25 @@ namespace SkillsMatrix.Models
 {
     public class QualificationCreate
     {
-        public int SkillId { get; set; }
+        [Key]
+        public int QualificationId { get; set; }
+
+        [Required]
+        public int OwnerId { get; set; }
+
+        [Required]
+        public int EmployeeId { get; set; }
+
+        [Required]
+        public Skill NameOfSkill { get; set; }
 
         [Range(1, 30)]
         public int YearsOfExperience { get; set; }
-        public string SkillLevel { get; set; }
-        public string Certification { get; set; }
+
+        [Required]
+        public SkillLevel LevelOfSkill { get; set; }
+        public CertificationName NameOfCertification { get; set; }
+        public DateTime? CertExpirationDate { get; set; }
 
         public override string ToString()
         {

@@ -20,9 +20,9 @@ namespace SkillsMatrix.Models
         SixSigmaGreenBelt
     }
 
-    public enum SkillLevel { Beginner = 1, Intermediate, Expert, Master }
+    public enum SkillLevel { Beginner = 1, Intermediate, Expert, Master, None }
 
-    public enum SkillId
+    public enum Skill
     {
         MicrosoftOffice = 1,
         css,
@@ -47,10 +47,13 @@ namespace SkillsMatrix.Models
     public class QualificationListItem
     {
         public int QualificationId { get; set; }
-        public string SkillsId { get; set; }
+        public int OwnerId { get; set; }
+        public int EmployeeId { get; set; }
+        public Skill NameOfSkill { get; set; }
         public int YearsOfExperience { get; set; }
         public SkillLevel LevelOfSkill { get; set; }
         public CertificationName NameOfCertification { get; set; }
+        public DateTime? CertExpirationDate { get; set; }
 
 
         [Display(Name="Created")]

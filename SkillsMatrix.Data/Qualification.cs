@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +20,9 @@ namespace SkillsMatrix.Data
         SixSigmaGreenBelt
     }
 
-    public enum SkillLevel { Beginner = 1, Intermediate, Expert, Master }
+    public enum SkillLevel { Beginner = 1, Intermediate, Expert, Master, None }
 
-    public enum SkillId
+    public enum Skill
     {
         MicrosoftOffice = 1,
         css,
@@ -45,11 +46,29 @@ namespace SkillsMatrix.Data
 
     public class Qualification
     {
+        [Key]
         public int QualificationId { get; set; }
-        public int SkillsId { get; set; }
+
+        [Required]
+        public int OwnerId { get; set; }
+
+        [Required]
+        public int EmployeeId { get; set; }
+
+        [Required]
+        public Skill NameOfSkill { get; set; }
+
+        [Required]
+        public SkillLevel LevelOfSkill { get; set; }
+
         public int YrsOfExperience { get; set; }
         public CertificationName NameOfCertification { get; set; }
-        public SkillLevel LevelOfSkill { get; set; }
+        public DateTime? CertExpirationDate { get; set; }
+
+        [Required]
+        public DateTimeOffset CreatedUtc { get; set; }
+
+        public DateTimeOffset? ModifiedUtc { get; set; }
     }
 }
 

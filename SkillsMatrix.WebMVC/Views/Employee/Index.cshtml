@@ -27,9 +27,6 @@
             @Html.DisplayNameFor(model => model.EmployeeId)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.OwnerId)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.FirstName)
         </th>
         <th>
@@ -54,9 +51,6 @@
                 @Html.DisplayFor(modelItem => item.EmployeeId)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.OwnerId)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.FirstName)
             </td>
             <td>
@@ -72,9 +66,9 @@
                 @Html.DisplayFor(modelItem => item.CreatedUtc)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Edit", "Edit", new { id=item.EmployeeId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.EmployeeId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.EmployeeId })
             </td>
         </tr>
     }

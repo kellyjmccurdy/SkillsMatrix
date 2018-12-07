@@ -249,6 +249,9 @@
     <Content Include="Views\Profile\Create.cshtml" />
     <Content Include="Views\Employee\Create.cshtml" />
     <Content Include="Views\Qualification\Create.cshtml" />
+    <Content Include="Views\Employee\Details.cshtml" />
+    <Content Include="Views\Employee\Edit.cshtml" />
+    <Content Include="Views\Employee\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

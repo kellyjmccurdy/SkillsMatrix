@@ -84,5 +84,40 @@ namespace SkillsMatrix.Services
                     };
             }
         }
+
+        public bool UpdateEmployee(EmployeeEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Employees
+                        .Single(e => e.EmployeeId == model.EmployeeId && e.OwnerId == _userId);
+
+                entity.EmployeeId = model.EmployeeId;
+                entity.FirstName = model.FirstName;
+                entity.LastName = model.LastName;
+                entity.JobTitle = model.JobTitle;
+                entity.LevelOfEducation = model.LevelOfEducation;
+                entity.ModifiedUtc = DateTimeOffset.UtcNow;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteEmployee(int EmployeeId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Employees
+                        .Single(e => e.EmployeeId == EmployeeId && e.OwnerId == _userId);
+
+                ctx.Employees.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

@@ -68,6 +68,18 @@
     <Compile Include="Migrations\201812061715528_Added Stuff.Designer.cs">
       <DependentUpon>201812061715528_Added Stuff.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812071607156_AddedColumnToTable.cs" />
+    <Compile Include="Migrations\201812071607156_AddedColumnToTable.Designer.cs">
+      <DependentUpon>201812071607156_AddedColumnToTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812071659435_CorrectedItems.cs" />
+    <Compile Include="Migrations\201812071659435_CorrectedItems.Designer.cs">
+      <DependentUpon>201812071659435_CorrectedItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812071851209_AddedColumns.cs" />
+    <Compile Include="Migrations\201812071851209_AddedColumns.Designer.cs">
+      <DependentUpon>201812071851209_AddedColumns.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Profile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -86,6 +98,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201812061715528_Added Stuff.resx">
       <DependentUpon>201812061715528_Added Stuff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812071607156_AddedColumnToTable.resx">
+      <DependentUpon>201812071607156_AddedColumnToTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812071659435_CorrectedItems.resx">
+      <DependentUpon>201812071659435_CorrectedItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812071851209_AddedColumns.resx">
+      <DependentUpon>201812071851209_AddedColumns.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

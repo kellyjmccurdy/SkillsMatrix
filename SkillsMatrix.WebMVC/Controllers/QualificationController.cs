@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SkillsMatrix.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,7 +13,7 @@ namespace SkillsMatrix.WebMVC.Controllers
         // GET: Qualification
         public ActionResult Index()
         {
-            var model = new SkillsMatrix.Models.QualificationListItem[0];
+            var model = new QualificationListItem[0];
             return View(model);
         }
 
@@ -24,7 +25,7 @@ namespace SkillsMatrix.WebMVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(SkillsMatrix.Models.QualificationCreate model)
+        public ActionResult Create(QualificationCreate model)
         {
             if (ModelState.IsValid)
             {

@@ -10,7 +10,6 @@ namespace SkillsMatrix.Data.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "SkillsMatrix.Data.ApplicationDbContext";
         }
 
         protected override void Seed(SkillsMatrix.Data.ApplicationDbContext context)

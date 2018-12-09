@@ -3,7 +3,7 @@ namespace SkillsMatrix.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class CorrectDatabase : DbMigration
     {
         public override void Up()
         {
@@ -17,6 +17,8 @@ namespace SkillsMatrix.Data.Migrations
                         LastName = c.String(nullable: false),
                         JobTitle = c.String(nullable: false),
                         LevelOfEducation = c.Int(nullable: false),
+                        CreatedUtc = c.DateTimeOffset(nullable: false, precision: 7),
+                        ModifiedUtc = c.DateTimeOffset(precision: 7),
                     })
                 .PrimaryKey(t => t.EmployeeId);
             
@@ -40,10 +42,15 @@ namespace SkillsMatrix.Data.Migrations
                 c => new
                     {
                         QualificationId = c.Int(nullable: false, identity: true),
-                        SkillsId = c.Int(nullable: false),
+                        OwnerId = c.Guid(nullable: false),
+                        EmployeeId = c.Int(nullable: false),
+                        NameOfSkill = c.Int(nullable: false),
+                        LevelOfSkill = c.Int(nullable: false),
                         YrsOfExperience = c.Int(nullable: false),
                         NameOfCertification = c.Int(nullable: false),
-                        LevelOfSkill = c.Int(nullable: false),
+                        CertExpirationDate = c.DateTime(),
+                        CreatedUtc = c.DateTimeOffset(nullable: false, precision: 7),
+                        ModifiedUtc = c.DateTimeOffset(precision: 7),
                     })
                 .PrimaryKey(t => t.QualificationId);
             

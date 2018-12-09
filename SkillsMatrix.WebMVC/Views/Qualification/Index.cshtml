@@ -9,22 +9,35 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+@if(TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success fade in" role="alert">
+        
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+}
+    
+
 <table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.QualificationId)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.SkillsId)
+            @Html.DisplayNameFor(model => model.NameOfSkill)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.YearsOfExperience)
+            @Html.DisplayNameFor(model => model.YrsOfExperience)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.SkillLevel)
+            @Html.DisplayNameFor(model => model.LevelOfSkill)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Certification)
+            @Html.DisplayNameFor(model => model.NameOfCertification)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.CreatedUtc)
@@ -38,24 +51,24 @@
             @Html.DisplayFor(modelItem => item.QualificationId)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.SkillsId)
+            @Html.DisplayFor(modelItem => item.NameOfSkill)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.YearsOfExperience)
+            @Html.DisplayFor(modelItem => item.YrsOfExperience)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.SkillLevel)
+            @Html.DisplayFor(modelItem => item.LevelOfSkill)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Certification)
+            @Html.DisplayFor(modelItem => item.NameOfCertification)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.CreatedUtc)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Edit", "Edit", new { id = item.QualificationId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.QualificationId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.QualificationId })
         </td>
     </tr>
 }

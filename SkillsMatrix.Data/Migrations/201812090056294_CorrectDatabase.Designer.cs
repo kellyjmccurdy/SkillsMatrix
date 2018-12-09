@@ -7,13 +7,13 @@ namespace SkillsMatrix.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class InitialCreate : IMigrationMetadata
+    public sealed partial class CorrectDatabase : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialCreate));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(CorrectDatabase));
         
         string IMigrationMetadata.Id
         {
-            get { return "201812051417466_InitialCreate"; }
+            get { return "201812090056294_CorrectDatabase"; }
         }
         
         string IMigrationMetadata.Source

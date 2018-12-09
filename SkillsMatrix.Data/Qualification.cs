@@ -25,8 +25,8 @@ namespace SkillsMatrix.Data
     public enum Skill
     {
         MicrosoftOffice = 1,
-        css,
-        html,
+        CSS,
+        HTML,
         HRIS,
         ProjectManagement,
         SoftwareDevelopment,
@@ -50,7 +50,7 @@ namespace SkillsMatrix.Data
         public int QualificationId { get; set; }
 
         [Required]
-        public int OwnerId { get; set; }
+        public Guid OwnerId { get; set; }
 
         [Required]
         public int EmployeeId { get; set; }
@@ -63,7 +63,6 @@ namespace SkillsMatrix.Data
 
         public int YrsOfExperience { get; set; }
         public CertificationName NameOfCertification { get; set; }
-        public DateTime? CertExpirationDate { get; set; }
 
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }

@@ -1,4 +1,6 @@
-﻿using SkillsMatrix.Models;
+﻿using Microsoft.AspNet.Identity;
+using SkillsMatrix.Models;
+using SkillsMatrix.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +15,10 @@ namespace SkillsMatrix.WebMVC.Controllers
         // GET: Qualification
         public ActionResult Index()
         {
-            var model = new QualificationListItem[0];
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new QualificationService(userId);
+            var model = service.GetQualifications();
+
             return View(model);
         }
 
@@ -27,11 +32,34 @@ namespace SkillsMatrix.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(QualificationCreate model)
         {
-            if (ModelState.IsValid)
-            {
+            if (!ModelState.IsValid) return View(model);
 
-            }
+            var service = CreateQualificationService();
+
+            if (service.CreateQualification(model))
+            {
+                TempData["SaveResult"] = "Your employee's qualifications were created.";
+                return RedirectToAction("Index");
+            };
+
+            ModelState.AddModelError("", "Qualifications could not be created.");
+
             return View(model);
+        }
+
+        public ActionResult Details(int id)
+        {
+            var svc = CreateQualificationService();
+            var model = svc.GetQualificationById(id);
+
+            return View(model);
+        }
+
+        private QualificationService CreateQualificationService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new QualificationService(userId);
+            return service;
         }
     }
 }

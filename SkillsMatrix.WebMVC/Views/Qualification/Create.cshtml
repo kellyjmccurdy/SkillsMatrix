@@ -24,10 +24,10 @@
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.YearsOfExperience, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model => model.YrsOfExperience, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.YearsOfExperience, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.YearsOfExperience, "", new { @class = "text-danger" })
+            @Html.EditorFor(model => model.YrsOfExperience, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.YrsOfExperience, "", new { @class = "text-danger" })
         </div>
     </div>
 
@@ -44,14 +44,6 @@
         <div class="col-md-10">
             @Html.EnumDropDownListFor(model => model.NameOfCertification, new { htmlAttributes = new { @class = "form-control" } })
             @Html.ValidationMessageFor(model => model.NameOfCertification, "", new { @class = "text-danger" })
-        </div>
-    </div>
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.CertExpirationDate, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.CertExpirationDate, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.CertExpirationDate, "", new { @class = "text-danger" })
         </div>
     </div>
 

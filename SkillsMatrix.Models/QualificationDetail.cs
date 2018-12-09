@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SkillsMatrix.Models
 {
-    public class QualificationListItem
+   public class QualificationDetail
     {
         public int QualificationId { get; set; }
         public Guid OwnerId { get; set; }
@@ -21,9 +21,9 @@ namespace SkillsMatrix.Models
         [Display(Name="Created")]
         public DateTimeOffset CreatedUtc { get; set; }
 
-        public override string ToString()
-        {
-            return base.ToString();
-        }
+        [Display(Name="Modified")]
+        public DateTimeOffset? ModifiedUtc { get; set; }
+        public override string ToString() => $"[{QualificationId}] {OwnerId}";
     }
 }
+

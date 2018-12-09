@@ -56,29 +56,9 @@
   <ItemGroup>
     <Compile Include="Employee.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\201812051417466_InitialCreate.cs" />
-    <Compile Include="Migrations\201812051417466_InitialCreate.Designer.cs">
-      <DependentUpon>201812051417466_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812051421188_FixingDatabaseErrors.cs" />
-    <Compile Include="Migrations\201812051421188_FixingDatabaseErrors.Designer.cs">
-      <DependentUpon>201812051421188_FixingDatabaseErrors.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812061715528_Added Stuff.cs" />
-    <Compile Include="Migrations\201812061715528_Added Stuff.Designer.cs">
-      <DependentUpon>201812061715528_Added Stuff.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812071607156_AddedColumnToTable.cs" />
-    <Compile Include="Migrations\201812071607156_AddedColumnToTable.Designer.cs">
-      <DependentUpon>201812071607156_AddedColumnToTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812071659435_CorrectedItems.cs" />
-    <Compile Include="Migrations\201812071659435_CorrectedItems.Designer.cs">
-      <DependentUpon>201812071659435_CorrectedItems.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201812071851209_AddedColumns.cs" />
-    <Compile Include="Migrations\201812071851209_AddedColumns.Designer.cs">
-      <DependentUpon>201812071851209_AddedColumns.cs</DependentUpon>
+    <Compile Include="Migrations\201812090056294_CorrectDatabase.cs" />
+    <Compile Include="Migrations\201812090056294_CorrectDatabase.Designer.cs">
+      <DependentUpon>201812090056294_CorrectDatabase.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Profile.cs" />
@@ -90,23 +70,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201812051417466_InitialCreate.resx">
-      <DependentUpon>201812051417466_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812051421188_FixingDatabaseErrors.resx">
-      <DependentUpon>201812051421188_FixingDatabaseErrors.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812061715528_Added Stuff.resx">
-      <DependentUpon>201812061715528_Added Stuff.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812071607156_AddedColumnToTable.resx">
-      <DependentUpon>201812071607156_AddedColumnToTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812071659435_CorrectedItems.resx">
-      <DependentUpon>201812071659435_CorrectedItems.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201812071851209_AddedColumns.resx">
-      <DependentUpon>201812071851209_AddedColumns.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201812090056294_CorrectDatabase.resx">
+      <DependentUpon>201812090056294_CorrectDatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

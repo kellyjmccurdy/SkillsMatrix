@@ -5,27 +5,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SkillsMatrix.Data
+namespace SkillsMatrix.Models
 {
-    public class Profile
+    public class ProfileDetail
     {
-        [Key]
         public int ProfileId { get; set; }
-
-        [Required]
+        public Guid OwnerId { get; set; }
         public int EmployeeId { get; set; }
-
         public int QualificationId { get; set; }
 
-        [Required]
-        public Guid OwnerId { get; set; }
-
-        public virtual Employee Employee { get; set; }
-        public virtual Qualification Qualification { get; set; }
-
-        [Required]
+        [Display(Name="Created")]
         public DateTimeOffset CreatedUtc { get; set; }
 
+        [Display(Name="Modified")]
         public DateTimeOffset? ModifiedUtc { get; set; }
+        public override string ToString() => $"[{ProfileId}] {OwnerId}";
     }
 }

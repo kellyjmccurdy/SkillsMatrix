@@ -59,10 +59,13 @@
     <Compile Include="EmployeeEdit.cs" />
     <Compile Include="EmployeeListItem.cs" />
     <Compile Include="ProfileCreate.cs" />
+    <Compile Include="ProfileDetail.cs" />
+    <Compile Include="ProfileEdit.cs" />
     <Compile Include="ProfileListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QualificationCreate.cs" />
     <Compile Include="QualificationDetail.cs" />
+    <Compile Include="QualificationEdit.cs" />
     <Compile Include="QualificationListItem.cs" />
   </ItemGroup>
   <ItemGroup>

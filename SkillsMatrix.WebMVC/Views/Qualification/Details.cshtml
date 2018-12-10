@@ -1,0 +1,75 @@
+﻿@model SkillsMatrix.Models.QualificationDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>QualificationDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmployeeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameOfSkill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameOfSkill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LevelOfSkill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LevelOfSkill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YrsOfExperience)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YrsOfExperience)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameOfCertification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameOfCertification)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedUtc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedUtc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedUtc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.QualificationId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

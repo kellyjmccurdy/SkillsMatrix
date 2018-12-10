@@ -60,6 +60,22 @@
     <Compile Include="Migrations\201812090056294_CorrectDatabase.Designer.cs">
       <DependentUpon>201812090056294_CorrectDatabase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201812090216360_CorrectingDatabase.cs" />
+    <Compile Include="Migrations\201812090216360_CorrectingDatabase.Designer.cs">
+      <DependentUpon>201812090216360_CorrectingDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812101559169_DeletedColumnsInDatabase.cs" />
+    <Compile Include="Migrations\201812101559169_DeletedColumnsInDatabase.Designer.cs">
+      <DependentUpon>201812101559169_DeletedColumnsInDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812101715149_RenamedProfileServicesClass.cs" />
+    <Compile Include="Migrations\201812101715149_RenamedProfileServicesClass.Designer.cs">
+      <DependentUpon>201812101715149_RenamedProfileServicesClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201812102135295_Corrections.cs" />
+    <Compile Include="Migrations\201812102135295_Corrections.Designer.cs">
+      <DependentUpon>201812102135295_Corrections.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Profile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,6 +88,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201812090056294_CorrectDatabase.resx">
       <DependentUpon>201812090056294_CorrectDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812090216360_CorrectingDatabase.resx">
+      <DependentUpon>201812090216360_CorrectingDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812101559169_DeletedColumnsInDatabase.resx">
+      <DependentUpon>201812101559169_DeletedColumnsInDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812101715149_RenamedProfileServicesClass.resx">
+      <DependentUpon>201812101715149_RenamedProfileServicesClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201812102135295_Corrections.resx">
+      <DependentUpon>201812102135295_Corrections.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

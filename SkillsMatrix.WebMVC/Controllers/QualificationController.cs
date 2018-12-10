@@ -55,6 +55,70 @@ namespace SkillsMatrix.WebMVC.Controllers
             return View(model);
         }
 
+        public ActionResult Edit(int id)
+        {
+            var service = CreateQualificationService();
+            var detail = service.GetQualificationById(id);
+            var model =
+                new QualificationEdit
+                {
+                    QualificationId = detail.QualificationId,
+                    OwnerId = detail.OwnerId,
+                    EmployeeId = detail.EmployeeId,
+                    NameOfSkill = detail.NameOfSkill,
+                    LevelOfSkill = detail.LevelOfSkill,
+                    YrsOfExperience = detail.YrsOfExperience,
+                    NameOfCertification = detail.NameOfCertification
+                };
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, QualificationEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if (model.QualificationId != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+
+            var service = CreateQualificationService();
+
+            if (service.UpdateQualification(model))
+            {
+                TempData["SaveResult"] = "Your qualifications have been updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Your qualifications could not be updated.");
+            return View();
+        }
+
+        public ActionResult Delete(int id)
+        {
+            var svc = CreateQualificationService();
+            var model = svc.GetQualificationById(id);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePost (int id)
+        {
+            var service = CreateQualificationService();
+
+            service.DeleteQualification(id);
+
+            TempData["SaveResult"] = "Your qualification was deleted.";
+
+            return RedirectToAction("Index");
+        }
+
         private QualificationService CreateQualificationService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());

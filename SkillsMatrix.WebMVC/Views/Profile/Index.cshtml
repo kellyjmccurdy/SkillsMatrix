@@ -9,6 +9,18 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success fade in" role="alert">
+        
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+}
+
 <table class="table">
     <tr>
         <th>
@@ -21,13 +33,7 @@
             @Html.DisplayNameFor(model => model.EmployeeId)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.SkillId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SkillLevel)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CertificationName)
+            @Html.DisplayNameFor(model => model.QualificationId)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.CreatedUtc)
@@ -35,35 +41,30 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ProfileId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.OwnerId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EmployeeId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SkillId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SkillLevel)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CertificationName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CreatedUtc)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProfileId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OwnerId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QualificationId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedUtc)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ProfileId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ProfileId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ProfileId })
+            </td>
+        </tr>
+    }
 
 </table>

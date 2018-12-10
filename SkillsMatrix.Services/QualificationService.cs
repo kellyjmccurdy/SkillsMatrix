@@ -84,5 +84,41 @@ namespace SkillsMatrix.Services
                     };
             }
         }
+
+        public bool UpdateQualification(QualificationEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Qualifications
+                        .Single(e => e.QualificationId == model.QualificationId && e.OwnerId == _userId);
+
+                entity.QualificationId = model.QualificationId;
+                entity.EmployeeId = model.EmployeeId;
+                entity.NameOfSkill = model.NameOfSkill;
+                entity.LevelOfSkill = model.LevelOfSkill;
+                entity.YrsOfExperience = model.YrsOfExperience;
+                entity.NameOfCertification = model.NameOfCertification;
+                entity.ModifiedUtc = DateTimeOffset.UtcNow;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteQualification(int qualificationId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Qualifications
+                    .Single(e => e.QualificationId == qualificationId && e.OwnerId == _userId);
+
+                ctx.Qualifications.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

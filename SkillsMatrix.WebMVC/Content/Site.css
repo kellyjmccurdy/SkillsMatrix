@@ -1,6 +1,39 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    background-image: url("/assets/Canva - Digitization, The Background, Technology.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-color: #1C445E;
+    font-family: url(https://fonts.googleapis.com/css?family=Inknut+Antiqua);
+    font-family: 'Inknut Antiqua', serif;
+}
+
+.navbar-inverse {
+    background-color: #2F928D;
+}
+
+.homeSection {
+    content: box;
+    color: antiquewhite;
+    border: 5px solid white;
+    padding: 5px;
+    margin: 5px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+
+h1 {
+    font-family: "Fira+Sans+Condensed", sans-serif;
+    font-size: 92px;
+    text-align: center;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+}
+
+col {
+    columns: 5px 3;
+    column-width: 5px;
 }
 
 /* Set padding to keep content from hitting the edges */

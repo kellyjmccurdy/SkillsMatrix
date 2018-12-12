@@ -15,14 +15,18 @@ namespace SkillsMatrix.Models
         public int EmployeeId { get; set; }
 
         [Required]
+        [Display(Name ="First Name")]
         public string FirstName { get; set; }
 
         [Required]
+        [Display(Name ="Last Name")]
         public string LastName { get; set; }
 
         [Required]
+        [Display(Name ="Job Title")]
         public string JobTitle { get; set; }
 
+        [Display(Name ="Level of Education")]
         public EducationLevel LevelOfEducation { get; set; }
 
         public override string ToString()

@@ -9,10 +9,12 @@ namespace SkillsMatrix.Models
 {
     public class ProfileCreate
     {
-        [Required]
-        public int ProfileId { get; set; }
         public Guid OwnerId { get; set; }
+
+        [Display(Name ="Employee ID")]
         public int EmployeeId { get; set; }
+
+        [Display(Name ="Qualification ID")]
         public int QualificationId { get; set; }
 
         public override string ToString() 

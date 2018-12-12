@@ -19,6 +19,8 @@ namespace SkillsMatrix.Models
 
         [Display(Name="Modified")]
         public DateTimeOffset? ModifiedUtc { get; set; }
+        public string EmployeeName { get; set; }
+
         public override string ToString() => $"[{ProfileId}] {OwnerId}";
     }
 }

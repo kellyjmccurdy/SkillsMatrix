@@ -23,7 +23,6 @@ namespace SkillsMatrix.Services
                 new Profile()
                 {
                     OwnerId = _userId,
-                    ProfileId = model.ProfileId,
                     EmployeeId = model.EmployeeId,
                     QualificationId = model.QualificationId,
                     CreatedUtc = DateTimeOffset.Now
@@ -76,7 +75,8 @@ namespace SkillsMatrix.Services
                         EmployeeId = entity.EmployeeId,
                         QualificationId = entity.QualificationId,
                         CreatedUtc = entity.CreatedUtc,
-                        ModifiedUtc = entity.ModifiedUtc
+                        ModifiedUtc = entity.ModifiedUtc,
+                        EmployeeName = entity.Employee.FirstName
                     };
             }
         }

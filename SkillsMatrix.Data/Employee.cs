@@ -26,6 +26,7 @@ namespace SkillsMatrix.Data
         public Guid OwnerId { get; set; }
 
         [Required]
+
         public string FirstName { get; set; }
 
         [Required]

@@ -188,6 +188,17 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\above-art-background-733852.jpg" />
+    <Content Include="assets\abstract-architectural-design-architecture-136419 %281%29.jpg" />
+    <Content Include="assets\aerial-background-beverage-1038674.jpg" />
+    <Content Include="assets\ballpen-blur-close-up-461077.jpg" />
+    <Content Include="assets\ballpen-business-cell-phone-1500.jpg" />
+    <Content Include="assets\blue-employee-image-background-small.jpg" />
+    <Content Include="assets\blue-matrix-background-small.jpg" />
+    <Content Include="assets\business_skills_success_workplace-small.jpg" />
+    <Content Include="assets\Canva - Digitization, The Background, Technology.jpg" />
+    <Content Include="assets\joshua-sortino-215039-unsplash.jpg" />
+    <Content Include="assets\reinaldo-kevin-678975-unsplash.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SkillsMatrix.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -12,7 +13,9 @@ namespace SkillsMatrix.Models
         public int ProfileId { get; set; }
         public Guid OwnerId { get; set; }
         public int EmployeeId { get; set; }
+        public string LastName { get; set; }
         public int QualificationId { get; set; }
+        public Skill NameOfSkill { get; set; }
 
         [Display(Name="Created")]
         public DateTimeOffset CreatedUtc { get; set; }

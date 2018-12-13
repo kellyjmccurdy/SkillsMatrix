@@ -13,8 +13,10 @@ namespace SkillsMatrix.Data
         public int ProfileId { get; set; }
 
         [Required]
+        [Display(Name = "Employee ID")]
         public int EmployeeId { get; set; }
 
+        [Display(Name = "Qualification ID")]
         public int QualificationId { get; set; }
 
         [Required]

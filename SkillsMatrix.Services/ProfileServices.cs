@@ -47,9 +47,11 @@ namespace SkillsMatrix.Services
                             e =>
                                 new ProfileListItem
                                 {
+                                    LastName = e.Employee.LastName,
                                     ProfileId = e.ProfileId,
                                     EmployeeId = e.EmployeeId,
                                     QualificationId = e.QualificationId,
+                                    NameOfSkill = e.Qualification.NameOfSkill,
                                     OwnerId = e.OwnerId,
                                     CreatedUtc = e.CreatedUtc
                                 }

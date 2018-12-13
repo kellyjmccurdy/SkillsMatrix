@@ -56,12 +56,17 @@ namespace SkillsMatrix.Data
         public int EmployeeId { get; set; }
 
         [Required]
+        [Display(Name = "Skill")]
         public Skill NameOfSkill { get; set; }
 
         [Required]
+        [Display(Name = "Skill Level")]
         public SkillLevel LevelOfSkill { get; set; }
 
+        [Display(Name = "Years of Experience")]
         public int YrsOfExperience { get; set; }
+
+        [Display(Name = "Certification")]
         public CertificationName NameOfCertification { get; set; }
 
         [Required]

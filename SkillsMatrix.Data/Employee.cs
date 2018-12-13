@@ -26,16 +26,19 @@ namespace SkillsMatrix.Data
         public Guid OwnerId { get; set; }
 
         [Required]
-
+        [Display(Name = "First Name")]
         public string FirstName { get; set; }
 
         [Required]
+        [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
         [Required]
+        [Display(Name = " Job Title")]
         public string JobTitle { get; set; }
 
         [Required]
+        [Display(Name = "Education Level")]
         public EducationLevel LevelOfEducation { get; set; }
 
         [Required]

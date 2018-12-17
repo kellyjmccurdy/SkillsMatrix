@@ -4,9 +4,9 @@
     ViewBag.Title = "Index";
 }
 
-<h2 style = "center">Profile Index</h2>
+<h2>Profile Index</h2>
 
-<p><a class="btn btn-info" value="Create New Profile" onclick="location.href="@Html.ActionLink("Create New", "Create","Profile")>"</a></p>
+<p><a class="btn btn-info" value="Create New Profile" onclick=location.href=@Html.ActionLink("Create New", "Create","Profile")</a></p>
 
 <br />
 <br />
@@ -25,41 +25,54 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.ProfileId)
+            @Html.DisplayNameFor(model => model.LastName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.LastName)
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobTitle)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.NameOfSkill)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CreatedUtc)
+            @Html.DisplayNameFor(model => model.LevelOfSkill)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NameOfCertification)
+        </th>
+
         <th></th>
     </tr>
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProfileId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NameOfSkill)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreatedUtc)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ProfileId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ProfileId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ProfileId })
-            </td>
-        </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameOfSkill)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LevelOfSkill)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameOfCertification)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ProfileId }, htmlAttributes: new {@class = "btn btn-info" }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ProfileId }, htmlAttributes: new {@class = "btn btn-info" }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ProfileId }, htmlAttributes: new {@class = "btn btn-info" })
+        </td>
+    </tr>
     }
 
 </table>

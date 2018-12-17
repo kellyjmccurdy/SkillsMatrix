@@ -11,22 +11,6 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.ProfileId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ProfileId)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.OwnerId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.OwnerId)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.EmployeeId)
         </dt>
 
@@ -35,11 +19,35 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.QualificationId)
+            @Html.DisplayNameFor(model => model.JobTitle)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.QualificationId)
+            @Html.DisplayFor(model => model.JobTitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameOfSkill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameOfSkill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LevelOfSkill)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LevelOfSkill)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameOfCertification)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameOfCertification)
         </dd>
 
         <dt>
@@ -61,6 +69,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ProfileId }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProfileId }, htmlAttributes: new { @class = "btn btn-light" }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

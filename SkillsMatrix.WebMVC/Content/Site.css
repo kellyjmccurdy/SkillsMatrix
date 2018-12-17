@@ -39,15 +39,26 @@ navbar-inverse {
     border: 7px solid white;
     padding: 7px;
     margin: 7px;
-    background: rgba(5, 227, 235, 0.3);
+    background: rgba(5, 227, 235, 0.5);
     text-align: center;
 }
 
 h1 {
     font-family: "Fira+Sans+Condensed",sans-serif;
-    font-size: 92px;
+    font-size: 90px;
     text-align: center;
     text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+}
+
+.homeSection h2 {
+    font-family: "Fira+Sans+Condensed",sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+.homeSection p {
+    font-family: "Fira+Sans+Condensed",sans-serif;
+    font-size: 20px;
     text-rendering: optimizeLegibility;
 }
 
@@ -56,7 +67,10 @@ body {
     padding-bottom: 20px;
 }
 
-
+.table th {
+    color: #060D0D;
+    Background: #5BC0DE;
+}
 
 /* Set padding to keep content from hitting the edges */
 .body-content {

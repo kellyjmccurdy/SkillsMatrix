@@ -63,7 +63,6 @@ namespace SkillsMatrix.WebMVC.Controllers
                 new ProfileEdit
                 {
                     ProfileId = detail.ProfileId,
-                    OwnerId = detail.OwnerId,
                     EmployeeId = detail.EmployeeId,
                     QualificationId = detail.QualificationId
                 };

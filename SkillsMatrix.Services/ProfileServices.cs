@@ -47,13 +47,18 @@ namespace SkillsMatrix.Services
                             e =>
                                 new ProfileListItem
                                 {
-                                    LastName = e.Employee.LastName,
                                     ProfileId = e.ProfileId,
-                                    EmployeeId = e.EmployeeId,
-                                    QualificationId = e.QualificationId,
-                                    NameOfSkill = e.Qualification.NameOfSkill,
                                     OwnerId = e.OwnerId,
-                                    CreatedUtc = e.CreatedUtc
+                                    EmployeeId = e.EmployeeId,
+                                    LastName = e.Employee.LastName,
+                                    FirstName = e.Employee.FirstName,
+                                    JobTitle = e.Employee.JobTitle,
+                                    NameOfSkill = e.Qualification.NameOfSkill,
+                                    LevelOfSkill = e.Qualification.LevelOfSkill,
+                                    QualificationId = e.QualificationId,
+                                    NameOfCertification = e.Qualification.NameOfCertification,
+                                    CreatedUtc = e.CreatedUtc,
+
                                 }
                         );
 
@@ -75,10 +80,16 @@ namespace SkillsMatrix.Services
                         ProfileId = entity.ProfileId,
                         OwnerId = entity.OwnerId,
                         EmployeeId = entity.EmployeeId,
+                        LastName = entity.Employee.LastName,
+                        FirstName = entity.Employee.FirstName,
+                        JobTitle = entity.Employee.JobTitle,
+                        NameOfSkill = entity.Qualification.NameOfSkill,
+                        LevelOfSkill = entity.Qualification.LevelOfSkill,
                         QualificationId = entity.QualificationId,
+                        NameOfCertification = entity.Qualification.NameOfCertification,
                         CreatedUtc = entity.CreatedUtc,
                         ModifiedUtc = entity.ModifiedUtc,
-                        EmployeeName = entity.Employee.FirstName
+                        
                     };
             }
         }

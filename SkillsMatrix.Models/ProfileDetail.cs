@@ -9,8 +9,11 @@ namespace SkillsMatrix.Models
 {
     public class ProfileDetail
     {
+        [Display(Name = "Profile ID")]
         public int ProfileId { get; set; }
         public Guid OwnerId { get; set; }
+
+        [Display(Name = "Employee ID")]
         public int EmployeeId { get; set; }
         public int QualificationId { get; set; }
 

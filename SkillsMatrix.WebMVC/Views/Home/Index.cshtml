@@ -2,36 +2,30 @@
     ViewBag.Title = "Home Page";
 }
     <div class="jumbotron" style="background-color: rgba(252,252,252, 0.3)">
-        <h1 class="display-1">Skills Matrix</h1>
-        <p class="lead">Search Employee Profiles</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+        <h1 class="display-1">Skills Matrix </h1>
     </div>
 
-    <div class="row">
-        <div class="col-md-4 homeSection">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+<div class="row">
+        <div class="col-md-4-offset-1 homeSection">
+            <h2>Add a New Employee</h2>
+            <p> Click here to add a new employee.
+            <p><a class="btn-lg btn-info" value="Add Employee" onclick=location.href=@Html.ActionLink("Employee", "Index", "Employee")</a></p>
         </div>
-        <div class="col-md-4 homeSection">
-            <h2>Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <div class="col-md-4-offset-1 homeSection">
+            <h2>Add Employee Qualifications</h2>
+            <p>Click here to add qualifications for an employee.</p>
+            <p><a class="btn-lg btn-info" value="Add Qualification" onclick=location.href=@Html.ActionLink("Qualification", "Index", "Qualification")</a></p>
         </div>
-        <div class="col-md-4 homeSection">
-            <h2>Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <div class="col-md-4-offset-1 homeSection">
+            <h2>View Employee Profiles</h2>
+            <p>Click here to view Employee Profiles.</p>
+            <p><a class="btn-lg btn-info" value="View Profile" onclick=location.href=@Html.ActionLink("Profile", "Index", "Profile")</a></p>
         </div>
     </div>
 
 <style>
     body {
-        background-image: url("/assets/Canva - Digitization, The Background, Technology.jpg");
+        background: url("/assets/Canva - Digitization, The Background, Technology.jpg"); 
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;

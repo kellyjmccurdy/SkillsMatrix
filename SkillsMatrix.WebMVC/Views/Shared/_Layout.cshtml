@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-10" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
+    <title>@ViewBag.Title - SkillMatrix Application</title>
     @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/css")
 
 </head>
 <body>
@@ -27,7 +27,6 @@
                         <li>@Html.ActionLink("Employee", "Index", "Employee")</li>
                         <li>@Html.ActionLink("Qualification", "Index", "Qualification")</li>
                     }
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")

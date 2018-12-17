@@ -26,7 +26,7 @@ namespace SkillsMatrix.Models
         [Display(Name ="Job Title")]
         public string JobTitle { get; set; }
 
-        [Display(Name ="Level of Education")]
+        [Display(Name ="Education Level")]
         public EducationLevel LevelOfEducation { get; set; }
 
         public override string ToString()
